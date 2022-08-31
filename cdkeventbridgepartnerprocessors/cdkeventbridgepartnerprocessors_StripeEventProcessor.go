@@ -63,6 +63,9 @@ func (j *jsiiProxy_StripeEventProcessor) PartnerEventsFunction() awslambda.Funct
 func NewStripeEventProcessor(scope constructs.Construct, id *string, props *StripeProps) StripeEventProcessor {
 	_init_.Initialize()
 
+	if err := validateNewStripeEventProcessorParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_StripeEventProcessor{}
 
 	_jsii_.Create(
@@ -84,7 +87,10 @@ func NewStripeEventProcessor_Override(s StripeEventProcessor, scope constructs.C
 	)
 }
 
-func (j *jsiiProxy_StripeEventProcessor) SetInvocationAlarm(val InvocationAlarm) {
+func (j *jsiiProxy_StripeEventProcessor)SetInvocationAlarm(val InvocationAlarm) {
+	if err := j.validateSetInvocationAlarmParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"invocationAlarm",
@@ -92,7 +98,10 @@ func (j *jsiiProxy_StripeEventProcessor) SetInvocationAlarm(val InvocationAlarm)
 	)
 }
 
-func (j *jsiiProxy_StripeEventProcessor) SetPartnerEventsFunction(val awslambda.Function) {
+func (j *jsiiProxy_StripeEventProcessor)SetPartnerEventsFunction(val awslambda.Function) {
+	if err := j.validateSetPartnerEventsFunctionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"partnerEventsFunction",
@@ -107,6 +116,9 @@ func (j *jsiiProxy_StripeEventProcessor) SetPartnerEventsFunction(val awslambda.
 func StripeEventProcessor_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateStripeEventProcessor_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

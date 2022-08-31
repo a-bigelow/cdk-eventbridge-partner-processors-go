@@ -63,6 +63,9 @@ func (j *jsiiProxy_GitHubEventProcessor) PartnerEventsFunction() awslambda.Funct
 func NewGitHubEventProcessor(scope constructs.Construct, id *string, props *GitHubProps) GitHubEventProcessor {
 	_init_.Initialize()
 
+	if err := validateNewGitHubEventProcessorParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_GitHubEventProcessor{}
 
 	_jsii_.Create(
@@ -84,7 +87,10 @@ func NewGitHubEventProcessor_Override(g GitHubEventProcessor, scope constructs.C
 	)
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) SetInvocationAlarm(val InvocationAlarm) {
+func (j *jsiiProxy_GitHubEventProcessor)SetInvocationAlarm(val InvocationAlarm) {
+	if err := j.validateSetInvocationAlarmParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"invocationAlarm",
@@ -92,7 +98,10 @@ func (j *jsiiProxy_GitHubEventProcessor) SetInvocationAlarm(val InvocationAlarm)
 	)
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) SetPartnerEventsFunction(val awslambda.Function) {
+func (j *jsiiProxy_GitHubEventProcessor)SetPartnerEventsFunction(val awslambda.Function) {
+	if err := j.validateSetPartnerEventsFunctionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"partnerEventsFunction",
@@ -107,6 +116,9 @@ func (j *jsiiProxy_GitHubEventProcessor) SetPartnerEventsFunction(val awslambda.
 func GitHubEventProcessor_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateGitHubEventProcessor_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

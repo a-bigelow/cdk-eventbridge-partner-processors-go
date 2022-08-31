@@ -63,6 +63,9 @@ func (j *jsiiProxy_TwilioEventProcessor) PartnerEventsFunction() awslambda.Funct
 func NewTwilioEventProcessor(scope constructs.Construct, id *string, props *TwilioProps) TwilioEventProcessor {
 	_init_.Initialize()
 
+	if err := validateNewTwilioEventProcessorParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_TwilioEventProcessor{}
 
 	_jsii_.Create(
@@ -84,7 +87,10 @@ func NewTwilioEventProcessor_Override(t TwilioEventProcessor, scope constructs.C
 	)
 }
 
-func (j *jsiiProxy_TwilioEventProcessor) SetInvocationAlarm(val InvocationAlarm) {
+func (j *jsiiProxy_TwilioEventProcessor)SetInvocationAlarm(val InvocationAlarm) {
+	if err := j.validateSetInvocationAlarmParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"invocationAlarm",
@@ -92,7 +98,10 @@ func (j *jsiiProxy_TwilioEventProcessor) SetInvocationAlarm(val InvocationAlarm)
 	)
 }
 
-func (j *jsiiProxy_TwilioEventProcessor) SetPartnerEventsFunction(val awslambda.Function) {
+func (j *jsiiProxy_TwilioEventProcessor)SetPartnerEventsFunction(val awslambda.Function) {
+	if err := j.validateSetPartnerEventsFunctionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"partnerEventsFunction",
@@ -107,6 +116,9 @@ func (j *jsiiProxy_TwilioEventProcessor) SetPartnerEventsFunction(val awslambda.
 func TwilioEventProcessor_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateTwilioEventProcessor_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

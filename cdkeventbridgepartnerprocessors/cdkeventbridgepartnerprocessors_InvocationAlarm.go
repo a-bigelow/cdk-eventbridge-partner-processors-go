@@ -37,6 +37,9 @@ func (j *jsiiProxy_InvocationAlarm) Node() constructs.Node {
 func NewInvocationAlarm(scope constructs.Construct, id *string, props *InvocationAlarmProps) InvocationAlarm {
 	_init_.Initialize()
 
+	if err := validateNewInvocationAlarmParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_InvocationAlarm{}
 
 	_jsii_.Create(
@@ -65,6 +68,9 @@ func NewInvocationAlarm_Override(i InvocationAlarm, scope constructs.Construct, 
 func InvocationAlarm_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateInvocationAlarm_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

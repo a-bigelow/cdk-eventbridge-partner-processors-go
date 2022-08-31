@@ -71,7 +71,10 @@ func NewPartnerProcessor_Override(p PartnerProcessor, scope constructs.Construct
 	)
 }
 
-func (j *jsiiProxy_PartnerProcessor) SetInvocationAlarm(val InvocationAlarm) {
+func (j *jsiiProxy_PartnerProcessor)SetInvocationAlarm(val InvocationAlarm) {
+	if err := j.validateSetInvocationAlarmParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"invocationAlarm",
@@ -79,7 +82,10 @@ func (j *jsiiProxy_PartnerProcessor) SetInvocationAlarm(val InvocationAlarm) {
 	)
 }
 
-func (j *jsiiProxy_PartnerProcessor) SetPartnerEventsFunction(val awslambda.Function) {
+func (j *jsiiProxy_PartnerProcessor)SetPartnerEventsFunction(val awslambda.Function) {
+	if err := j.validateSetPartnerEventsFunctionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"partnerEventsFunction",
@@ -94,6 +100,9 @@ func (j *jsiiProxy_PartnerProcessor) SetPartnerEventsFunction(val awslambda.Func
 func PartnerProcessor_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validatePartnerProcessor_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

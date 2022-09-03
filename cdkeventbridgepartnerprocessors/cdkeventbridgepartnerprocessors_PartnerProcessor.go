@@ -10,8 +10,10 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-// CDK wrapper for the GitHub Eventbridge processor.
-// See: https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
+// Abstract class for Lambda-driven Eventbridge integrations.
+//
+// This only works because the pattern for the S3 Keys lines up to: lambda-templates/<partner>-lambdasrc.zip
+// See: https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html
 //
 type PartnerProcessor interface {
 	constructs.Construct

@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-// CDK wrapper for the GitHub Eventbridge processor.
+// CDK wrapper for the Stripe Eventbridge processor.
 // See: https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
 //
 type StripeEventProcessor interface {

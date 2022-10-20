@@ -1,5 +1,4 @@
 //go:build !no_runtime_type_checking
-// +build !no_runtime_type_checking
 
 // cdk-eventbridge-partner-processors
 package cdkeventbridgepartnerprocessors

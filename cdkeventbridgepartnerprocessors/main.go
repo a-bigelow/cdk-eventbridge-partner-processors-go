@@ -1,3 +1,4 @@
+// cdk-eventbridge-partner-processors
 package cdkeventbridgepartnerprocessors
 
 import (
